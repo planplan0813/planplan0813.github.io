@@ -1,0 +1,118 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+a{
+    text-decoration: none;
+}
+img{
+    vertical-align: bottom;
+    max-width: 100%;
+}
+body{
+    background-color: rgb(56, 0, 0);
+    
+}
+
+h1{
+    text-align: center;
+    margin: 40px auto;
+    color: rgb(255, 255, 255);
+}
+.column-wrapper{
+    width: 90%;
+    margin: 0 auto 100px;
+    columns: 4;/* CSS 一括指定プロパティで、要素の内容物を描画する際に使用する段数や段の幅を設定します。 */
+    gap: 30px;
+    
+}
+.box{
+    break-inside: avoid;/* 要素の中で改行されないようにする*/
+    background-color: #8d0000;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    color: aliceblue;
+    box-shadow:0 10px 10px 0px #ff0;
+}
+.photo img{
+    border-radius: 8px;
+
+}
+.photo{
+    margin-bottom: 16px;
+}
+.txt{
+    line-height: 1.8;
+}
+
+
+/* 960以下の時３カラム*/
+@media (max-width:960px){
+    .column-wrapper{
+    columns: 3;
+    width: 96%;
+    gap: 20px;
+    
+}
+.box{
+    margin-bottom: 20px;
+}
+#mave-btn{
+    display: none;
+
+}
+}
+
+/* 640以下の時に２カラム*/
+@media(max-width:640px){
+    .column-wrapper{
+    columns: 2;
+    gap: 12px;
+}
+.box{
+    margin-bottom: 20px;
+    box-shadow:0 10px 10px 0 #ff0;
+}
+.box:nth-of-type(n+9){
+    display: none;
+}
+
+#mave-btn{
+    display: block;
+    margin-bottom: 50px;
+}
+
+/* ボタンのスニペット */
+.button01 a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1em 2em;
+    width: 300px;
+    color: #333;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: #cccccc;
+    transition: 0.3s;
+  }
+  
+  .button01 a::after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-top: 3px solid #333333;
+    border-right: 3px solid #333333;
+    transform: rotate(45deg);
+  }
+  
+  .button01 a:hover {
+    text-decoration: none;
+    background-color: #bbbbbb;
+  }
+
+}
