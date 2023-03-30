@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>srcsetをbxslidarで動かす</title>
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        
+        }
+        img{
+            max-width: 100%;
+            vertical-align: bottom;
+        }
+        h1{
+            text-align: center;
+            margin: 30px auto;
+        }
+        .visual{
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 10px;
+        }
+        p{
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>srcsetをbxslidarで動かす</h1>
+    <p>641px以上の時はpc-01.jpg(960px)を表示<br>
+        640px以下の時はsp-01.jpg(640px)を表示<br>
+
+    </p>
+
+
+    <div class="visual">
+        <div class="bxslider">
+            <picture>
+                <source media="(min-width:641px)" srcset="img/ps-02.jpg 960w" sizes="100vw">
+                <img media="(max-width:640px)" srcset="img/sp-02.jpg 640w" sizes="100vw">
+                
+            </picture>
+
+            <picture>
+                <source media="(min-width:641px)" srcset="img/ps-01.jpg 960w" sizes="100vw">
+                <img media="(max-width:640px)" srcset="img/sp-01.jpg 640w" sizes="100vw">
+                
+            </picture>
+        </div>
+    </div>
+
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js' integrity='sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==' crossorigin='anonymous'></script>
+
+    <script src="js/jquery.bxslider.js"></script>
+
+    <script>
+        $(function(){
+            $('.bxslider').bxSlider({
+                // GENERAL
+                mode: 'fade',
+
+                auto: true, //true　オフ、false オン
+                controls: false,//次の画像に行く矢印をoff
+
+                // PAGER 黒いマル
+                pager: false,
+
+                // TOUCHからコピー
+                touchEnabled: false,//スマホ時のスライドを無効
+
+                //../img/を変更する
+            });
+        });
+    </script>
+    
+</body>
+</html>
