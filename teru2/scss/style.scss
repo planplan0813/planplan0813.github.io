@@ -1,0 +1,562 @@
+@use "reset";
+
+
+
+
+
+
+/* *{
+    outline: 1px solid red;
+}  */
+
+
+
+//変数の登録
+//カラーの登録
+$color_1:#1B2020;
+$color_2:#B6AB78;//mozi
+$color_3:#937346;
+$color_4:#A59F5C;
+$color_txt:#625b58;
+
+
+
+
+body{
+    background-color: $color_1;
+        font-family:"Hannari", 'Noto Serif JP', serif; 
+    
+}
+
+/* .container{
+    max-width: 1300px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 10px;
+
+} */
+main{
+    max-width: 1200px;
+    margin: 0 auto;
+    //background-color: #fff;
+    //padding: 10px;
+}
+header{
+    height: 50px;
+    background-color: #000;
+    margin-bottom: 50px;
+    display: flex;
+    padding: 0 20px 0;
+    position:fixed;
+    
+    
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    h1{
+        color: #fff;
+    }
+    
+    
+    
+}
+
+.tag-line{
+    color: #ffffff;
+    margin-right: auto;
+    line-height: 50px;
+    padding-left: 20px;
+   
+}
+
+
+//ナビゲーション
+.g-nav{
+    height: 50px;
+    
+    margin-bottom: 10px;
+}
+.g-nav>ul{
+    display: flex;
+}
+.g-nav li{
+    width: 180px;
+}
+.g-nav a{
+    //background-color: #f78f8f;
+    display: block;
+    line-height: 50px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+}
+.g-nav a:hover{
+    background-color:$color_2;
+    color: #000;
+}
+.g-nav li:nth-of-type(n+2)>a{
+    border-left: 1px solid #310333;
+}
+
+
+
+.main-visual img{
+    //margin-top: 100px;
+    object-fit: cover;
+    object-position: center 110%;
+    width: 100%;
+    height: 80vh;
+    
+}
+
+/* .main-vesual{
+    margin-bottom: 70px;
+    width: 100%;
+    height: 100vh;
+    
+    
+} */
+
+
+.main-vesual li{
+    
+    width: 100%;
+    height: 80vh;
+    
+    
+}
+
+.dxslider{
+    display: flex;
+    justify-content: flex-end;
+    background: url(../img/main.img.02.jpg) no-repeat center center/cover;
+    height: 80vh;
+    margin-top: 100px;
+    .bg{
+    clip-path: polygon(100% 100%,100% 0%,70% 0%, 0% 100%);
+    height: 80vh;
+    
+    
+}
+
+
+}
+
+
+.sub-main{
+    background: url(../img/main-000.jpg) no-repeat center center/cover;
+    height: 80vh;
+    
+   
+    
+    
+    
+    .bg-2{
+        clip-path: polygon(100% 100%,100% 0%,70% 0%, 0% 100%);
+    height: 80vh;
+
+    }
+}
+
+
+
+
+.main-copy>h2{
+    margin: 100px 0 30px;
+    text-align: center;
+    color: $color_2;
+}
+.lead{
+    width: 50%;
+    margin: 0 auto 100px;
+    text-align: center;
+    color: $color_2;
+    line-height: 2;
+}
+
+
+.content-box{
+    display: flex;
+        justify-content: space-between;
+        margin-bottom: 100px;
+}
+.content-img{
+    width: calc((100% - 10px));
+        height: 65vh;
+    /* width: 100%;
+    height: 40vh;
+    margin-bottom: 10px; */
+}
+.content-img>img{
+    object-fit: cover;/* 親の子要素に必ず */
+    width: 100%;
+    height: 100%;
+}
+.content-txt{
+    color: #fff;
+    padding: 0 20px 50px;
+        width: calc((60% - 10px) );
+        height: 65vh;
+        
+    
+    
+}
+
+.content-txt>h2{
+    margin-bottom: 40px;
+    text-align: center;
+}
+.text{
+    
+    margin-bottom: 10px;
+    line-height: 2.5;
+
+}
+
+.content-box:nth-of-type(2){
+    flex-direction: row-reverse;
+}
+
+
+
+.item-wrapper{
+    
+    max-width: 680px;
+    margin: 100px auto 100px;
+    h3{
+        color: $color_2;
+        font-size: 30px;
+        margin-bottom: 55px;
+        text-align: center;
+    }
+}
+.item-txt{
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    border-bottom: 1px solid $color_2;
+}
+
+
+.info-wrapper{
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    background-color: #000000;
+}
+
+.company-info{
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    
+    
+}
+.company-info>dt{
+    width: 30%;
+    background-color: rgb(114, 112, 112);
+    padding: 20px;
+    box-sizing: border-box;
+    border-right: 1px solid #000;
+}
+.company-info>dd{
+    width: 70%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.company-info>dt:nth-of-type(n+2){
+    border-top:1px solid #000 ;
+}
+.company-info>dd:nth-of-type(n+2){
+    border-top:1px solid #000 ;
+}
+
+.map-wrapper{
+    width: 800px;
+    height: 360px;
+}
+
+.g-map{
+    width: 100%;
+    height: 100%;
+}
+
+
+footer{
+    margin-top: 100px;
+    background-color:$color_4;
+    padding: 20px 0;
+    
+}
+
+footer>p{
+    text-align: center;
+    color: #ffffff;
+
+}
+
+.info-wrapper.map-wrapper.g-map{
+    width: 50%;
+    height: 100px;
+
+}
+
+
+
+
+
+//コンセプト
+//コンセプトページ
+
+.consept-wrapper{
+    font-family:"Hannari", 'Noto Serif JP', serif; 
+    color: #fff;
+    width: 1200px;
+    margin: 0 auto;
+    h1{
+        text-align: center;
+        margin: 100px auto 50px;
+        span{
+            color: $color_4;
+            margin-right: 5px;
+        }
+    }
+}
+
+.concept-txt{
+    text-align: center;
+    color: #fff;
+    line-height: 3;
+    margin-bottom: 100px;
+}
+
+.consept-pr{
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    padding-bottom: 30px;
+
+}
+.pr-wrapper{
+    max-width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    gap: 30px;
+}
+.pr-box{
+    h2{
+        margin-bottom: 30px;
+    }
+    h3{
+        margin-bottom: 30px;
+    }
+}
+.pr-txt{
+    line-height: 2;
+}
+
+img{
+    /*   imgに対してサイズを指定すると縦横比が変わってしまう */
+      width:680px;
+      height:480px;
+      vertical-align: bottom;
+      
+    /*   object-fit:cover;を追加するとトリミングされる */
+      object-fit:cover;
+      object-position:bottom;
+      
+    }
+
+
+    //メニューページ
+
+
+.manu-wrapper{
+    width: 680px;
+    margin: 0 auto 100px;
+}
+.manu-box{
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.sake-wrapper{
+    width: 680px;
+    margin: 0 auto 100px;
+    h2{
+        text-align: center;
+        color: #fff;
+        margin: 100px auto 50px;
+        span{
+            color: $color_4;
+            margin-right: 5px;
+        }
+    }
+
+}
+#manu-t{
+    text-align: center;
+        color: #fff;
+        font-size: 30px;
+        font-weight: bold;
+        margin: 100px auto 100px;
+        span{
+            color:$color_2;
+            margin-right: 5px;
+        }
+
+}
+  
+
+.scloll-wrapper{
+    max-width: 1200px;
+    
+    margin: 0 auto 100px;
+    display: flex;
+    justify-content: space-between;
+    
+    gap: 30px;/* 決めた余白分を指定（縦・横）（例 60px 30px） */
+}
+.scloll-box{
+    //background-color: rgb(245, 217, 217);
+    .txt{
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        color: #fff;
+
+    }
+    
+}
+.photo{
+    margin-bottom: 10px;
+}
+
+
+/* 予約フォーム */
+
+
+.reserve-t{
+    text-align: center;
+        color: #fff;
+        font-size: 30px;
+        font-weight: bold;
+        margin: 100px auto 100px;
+}
+
+
+.form{
+    max-width: 800px;
+    margin: 0 auto 100px;
+}
+.g-form{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+/* .hhh{
+    display: flex;
+    justify-content: flex-end;
+    background: url(../img/main-02-bg-jpg.jpg);
+    height: 80vh;
+}
+img{
+    clip-path: polygon(100% 100%,100% 0%,25% 0%, 0% 100%);
+    height: 80vh;
+} */
+
+
+
+
+
+
+/* 960px以下 */
+@media(max-width:960px){
+    .scloll-wrapper{
+        gap: 40px 20px;
+    }
+    .scloll-box{
+        width: calc((100% - 20px) / 2);/* ((100% - 余白1分px))/2 2で割る*/
+        padding: 20px;
+
+    }
+}
+
+
+
+
+@media (max-width:800px){
+.wrapper{
+display: block;}
+
+
+.main{
+    width: 100%;
+    height: 300px;
+}
+.sub{
+width: 100%;
+height: 200px;
+}
+}
+/* 500px以下になったら.mainのheightwo500px.container、.subのheightを300pxにする */
+
+@media (max-width:500px){
+    header{
+        height: 220px;
+    }
+    .main{
+        height: 500px;
+    }
+    .sub{
+        height: 300px;
+    }
+    .g-nav{
+        height: 100px;
+    }
+    .g-nav>ul{
+        flex-wrap: wrap;
+    }
+    .g-nav li{
+        width: 50%;
+    }
+    .g-nav li:nth-of-type(3)>a{
+        border-left: 0;/* いらないボーダーを消した */
+    }
+    .g-nav li:nth-of-type(n+3)>a{
+        border-top: 1px solid rgb(8, 8, 8);/* 3.4番に線を入れた */
+    }
+}
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
